@@ -1,26 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component, Fragment } from 'react';
+import Header from './Header'
+import OptionCard from './OptionCard'
+import './app.css'
+
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <Fragment>
+          <Header title="Guerra de lenguajes" background={'k'}/>
+          <section class="card-container">
+            <OptionCard option="piedra" />
+            <OptionCard option="papel" />
+            <OptionCard option="tijeras" />
+          </section>
+        </Fragment>
+        
     );
   }
 }
