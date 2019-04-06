@@ -15,10 +15,12 @@ const HeaderStyles = styled.section`
 `;
 
 // const Header = (props) => {
-const Header = ({ title, background }) => {
+const Header = ({ title, background, click }) => {
     return(
         <HeaderStyles>
+            <button onClick={()=> click('vs')}>Player vs Player</button>
             <h1 className={background}>{title}</h1>
+            <button onClick={()=> click('single')}>Player vs Computer</button>
         </HeaderStyles>
     )
 }
